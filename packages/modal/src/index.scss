@@ -1,0 +1,178 @@
+@charset "UTF-8";
+@import 'packages/theme/var/index';
+@import 'packages/theme/mixins/mixins';
+
+@include b(modal) {
+  position: relative;
+  margin: 0 auto 50px;
+  background: $--modal-background-color;
+  border-radius: $--border-radius-medium;
+  box-shadow: $--modal-box-shadow;
+  box-sizing: border-box;
+  width: 618px;
+
+  // @include when(fullscreen) {
+  //   width: 100%;
+  //   margin-top: 0;
+  //   margin-bottom: 0;
+  //   height: 100%;
+  //   overflow: auto;
+  // }
+
+  @include e(wrapper) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    margin: 0;
+  }
+
+  @include e(header) {
+    padding: $--modal-padding-primary;
+  }
+
+  @include e(headerbtn) {
+    position: absolute;
+    top: $--modal-padding-primary;
+    right: $--modal-padding-primary;
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: $--message-close-size;
+
+    .#{$namespace}-modal__close {
+      color: $--color-info;
+      font-size: $--font-size-small;
+      font-weight: 300;
+    }
+
+    &:focus,
+    &:hover {
+      .#{$namespace}-modal__close {
+        color: $--color-primary;
+      }
+    }
+  }
+
+  @include e(title) {
+    // line-height: $--modal-font-line-height;
+    font-size: $--modal-title-font-size;
+    color: $--color-text-primary;
+    font-weight: 600;
+  }
+
+  @include e(body) {
+    padding: 0 $--modal-padding-primary $--modal-padding-primary;
+    color: $--color-text-regular;
+    font-size: $--modal-content-font-size;
+    word-break: break-all;
+  }
+
+  @include e(footer) {
+    padding: $--modal-padding-primary;
+    padding-top: 0;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  @include e(confirmcontent) {
+    font-size: $--font-size-base;
+  }
+
+  @include e(confirmtitle) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: $--modal-padding-primary;
+    font-size: 20px;
+    color: $--color-text-primary;
+    font-weight: 600;
+
+    @include m(icontitle) {
+      margin-left: 10px;
+    }
+  }
+  // // 内容居中布局
+  // @include m(center) {
+  //   text-align: center;
+
+  //   @include e(body) {
+  //     text-align: initial;
+  //     padding: 25px ($--modal-padding-primary + 5px) 30px;
+  //   }
+
+  //   @include e(footer) {
+  //     text-align: inherit;
+  //   }
+  // }
+
+  @include m(large) {
+    width: 1000px;
+  }
+
+  @include m(medium) {
+    width: 618px;
+  }
+  @include m(small) {
+    width: 410px;
+  }
+}
+
+.modal-fade-enter-active {
+  animation: modal-active-fade-in 0.3s !important;
+  .#{$namespace}-modal {
+    animation: modal-active-fade-in 0.3s;
+  }
+}
+
+.modal-fade-leave-active {
+  animation: modal-fade-out 0.3s;
+  .#{$namespace}-modal {
+    animation: dialog-fade-out 0.3s;
+  }
+}
+
+@keyframes modal-fade-in {
+  0% {
+    transform: translate3d(0, -20px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes modal-fade-out {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, -20px, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes modal-active-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes modal-active-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
