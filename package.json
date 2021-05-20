@@ -8,7 +8,7 @@
     "vue",
     "components"
   ],
-  "author": "yangxueqian",
+  "author": "yang",
   "license": "ISC",
   "scripts": {
     "dev": "webpack-dev-server --inline --config ./build/webpack.dev.conf.js",

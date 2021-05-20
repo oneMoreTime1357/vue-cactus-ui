@@ -1,3 +1,3 @@
-# cactus-ui
+# green-ui
 
-魔法校 UI 组件库
+一个ui组件库
