@@ -1,4 +1,4 @@
-# cactus-ui
+# vue-cactus-ui
 
 一个ui组件库
 
