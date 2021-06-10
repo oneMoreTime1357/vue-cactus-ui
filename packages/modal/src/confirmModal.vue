@@ -7,6 +7,7 @@
     :titleAlign="titleAlign"
     :closeable="closeable"
     footer=""
+    :z-index="zIndex"
     :maskClosable="maskClosable"
   >
     <template #title>

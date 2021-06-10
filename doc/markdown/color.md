@@ -4,8 +4,8 @@
 
 <template>
   <div class="demo-color-block">
-    <div class="demo-color-box" style="border-color: #0182FF;"></div>
-    <p>#0182FF</p>
+    <div class="demo-color-box" style="border-color: #33812C;"></div>
+    <p>#33812C</p>
   </div>
 </template>
 
@@ -13,16 +13,16 @@
 
 <template>
   <div class="demo-color-block">
-    <div class="demo-color-box" style="border-color: #1BC1CC;"></div>
-    <p>#1BC1CC</p>
+    <div class="demo-color-box" style="border-color: #F7B500;"></div>
+    <p>#F7B500</p>
   </div>
   <div class="demo-color-block">
-    <div class="demo-color-box" style="border-color: #FB594A;"></div>
-    <p>#FB594A</p>
+    <div class="demo-color-box" style="border-color: #54A94D;"></div>
+    <p>#54A94D</p>
   </div>
   <div class="demo-color-block">
-    <div class="demo-color-box" style="border-color: #FF9F06;"></div>
-    <p>#FF9F06</p>
+    <div class="demo-color-box" style="border-color: #F45F5F;"></div>
+    <p>#F45F5F</p>
   </div>
 </template>
 

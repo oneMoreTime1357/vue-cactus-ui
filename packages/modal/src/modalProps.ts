@@ -27,6 +27,7 @@ export const modalFuncProps = {
   message: VueTypes.string,
   content: VueTypes.string,
   size: VueTypes.oneOf(ComSizeType).def('small'),
+  zIndex: VueTypes.number,
   contentAlign: VueTypes.string.def('center'),
   titleAlign: VueTypes.string.def('left'),
   cancelText: VueTypes.string,
