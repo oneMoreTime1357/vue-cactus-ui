@@ -7,7 +7,7 @@ import 'doc/assets/css/reset.scss'
 import './demo-styles/index.scss'
 import DemoBlock from 'doc/components/demoBlock'
 import Modal from '../packages/modal'
-import icon from './icon.json'
+import icon from './icons.json'
 
 import '../packages/theme/index.scss'
 

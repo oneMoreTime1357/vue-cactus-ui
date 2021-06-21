@@ -4,14 +4,14 @@
 
 ## 基本用法
 
-直接通过类名`c-icon-refresh`来使用即可
+直接通过类名`c-icon-add`来使用即可
 
 :::demo
 
 ```html
-<i class="c-icon-refresh"></i>
-<i class="c-icon-like"></i>
-<i class="c-icon-message-solid"></i>
+<i class="c-icon-add"></i>
+<i class="c-icon-ashbin"></i>
+<i class="c-icon-close"></i>
 ```
 
 :::
@@ -19,10 +19,10 @@
 ## 图标集合
 
 <ul class="icon-list">
-  <li v-for="name in $icon" :key="name">
+  <li v-for="item in $icon.glyphs" :key="item.name">
     <span>
-      <i :class="'c-icon-' + name"></i>
-      <span class="icon-name">{{'c-icon-' + name}}</span>
+      <i :class="$icon.css_prefix_text + item.name"></i>
+      <span class="icon-name">{{$icon.css_prefix_text + item.name}}</span>
     </span>
   </li>
 </ul>

@@ -30,7 +30,7 @@
             type="button"
             @click="handleClose"
           >
-            <i class="c-modal__close c-icon-close"></i>
+            <i class="c-modal__close c-icon-close-bold"></i>
           </button>
         </div>
         <div class="c-modal__body">

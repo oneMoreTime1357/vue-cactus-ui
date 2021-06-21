@@ -17,3 +17,27 @@
 **typescript**
 
 使用typescript也是为了避免一些类型错误
+
+## use
+
+**调试启动**
+
+```shell
+yarn run dev
+```
+
+**组件build打包**
+执行此命令会把组件以及样式库作为输出
+
+```shell
+yarn run build:ui
+```
+
+**文档build**
+
+```shell
+yarn run build:doc
+```
+
+## 现有组件
+

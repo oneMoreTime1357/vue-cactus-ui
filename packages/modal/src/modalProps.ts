@@ -13,19 +13,17 @@ export const modalProps = {
   footer: VueTypes.any,
   maskClosable: VueTypes.bool.def(true),
   closeOnPressEscape: VueTypes.bool.def(true),
-  // mask: VueTypes.bool,
   zIndex: VueTypes.number,
-  appendToBody: VueTypes.bool.def(false),
   top: VueTypes.string.def('15vh'),
   customClass: VueTypes.string,
   titleAlign: VueTypes.string,
+  footButtonWidth: VueTypes.number.def(102)
 }
 
 export const modalFuncProps = {
   title: VueTypes.string,
   visible: VueTypes.bool.def(false),
   message: VueTypes.string,
-  content: VueTypes.string,
   size: VueTypes.oneOf(ComSizeType).def('small'),
   zIndex: VueTypes.number,
   contentAlign: VueTypes.string.def('center'),
@@ -42,4 +40,6 @@ export const modalFuncProps = {
   showCancel: VueTypes.bool.def(true),
   maskClosable: VueTypes.bool.def(true),
   closeOnPressEscape: VueTypes.bool.def(true),
+  dangerouslyUseHTMLString: VueTypes.bool.def(false),
+  footButtonWidth: VueTypes.number.def(102)
 }

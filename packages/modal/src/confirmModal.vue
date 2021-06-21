@@ -7,21 +7,34 @@
     :titleAlign="titleAlign"
     :closeable="closeable"
     footer=""
-    :z-index="zIndex"
     :maskClosable="maskClosable"
+    :zIndex="zIndex"
   >
     <template #title>
-      <div v-if="type === 'confirm'" class="c-modal__title">
+      <div
+        v-if="type === 'confirm'"
+        class="c-modal__title"
+      >
         <span>{{ title }}</span>
       </div>
-      <div v-else class="c-modal__confirmtitle">
+      <div
+        v-else
+        class="c-modal__confirmtitle"
+      >
         <component :is="iconElement" />
         <span class="c-modal__confirmtitle--icontitle">{{ title }}</span>
       </div>
     </template>
 
-    <div class="c-modal__confirmcontent" :style="{ textAlign: contentAlign }">
-      <span>{{ content || message }}</span>
+    <div
+      class="c-modal__confirmcontent"
+      :style="{ textAlign: contentAlign }"
+    >
+      <span v-if="!dangerouslyUseHTMLString">{{ message }}</span>
+      <div
+        v-else
+        v-html="message"
+      >{{ message }}</div>
     </div>
     <template #footer>
       <actionBtn
@@ -29,16 +42,16 @@
         size="small"
         :type="cancelType ? cancelType : 'default'"
         :closeModal="close"
+        :width="footButtonWidth"
         :actionFn="onCancel"
-        >{{ cancelText ? cancelText : '取 消' }}</actionBtn
-      >
+      >{{ cancelText ? cancelText : '取 消' }}</actionBtn>
       <actionBtn
         :type="confirmType ? confirmType : 'primary'"
         size="small"
         :closeModal="close"
+        :width="footButtonWidth"
         :actionFn="onConfirm"
-        >{{ confirmText ? confirmText : '确 定' }}</actionBtn
-      >
+      >{{ confirmText ? confirmText : '确 定' }}</actionBtn>
     </template>
   </c-modal>
 </template>
@@ -67,7 +80,7 @@ export default defineComponent({
   props: {
     ...modalFuncProps,
   },
-  emits: ['vanish', 'action'],
+  emits: ['action'],
   setup(props) {
     const iconElement = computed(() => {
       const type = props.type
@@ -77,9 +90,6 @@ export default defineComponent({
     return {
       iconElement,
     }
-  },
-  mounted() {
-    // console.log(this.$attrs, 23333)
   },
 })
 </script>

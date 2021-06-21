@@ -45,7 +45,7 @@
         </template>
         <i
           v-if="showClear"
-          class="c-input__icon c-icon-circle-close c-input__clear"
+          class="c-input__icon c-icon-error c-input__clear"
           @mousedown.prevent
           @click="handleClear"
         ></i>
