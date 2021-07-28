@@ -47,5 +47,6 @@ export const playRoutes = [
 const routes = [...commonRoutes, ...navRoutes, ...playRoutes]
 
 export default new Router({
+  mode: 'history',
   routes,
 })

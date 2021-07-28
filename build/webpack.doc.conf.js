@@ -13,7 +13,7 @@ module.exports = merge(baseConf, {
   output: {
     filename: 'js/[name].[contenthash].js',
     path: resolve('dist'),
-    publicPath: '/',
+    publicPath: '/vue-cactus-ui/',
     library: 'cactus-ui-doc',
     libraryTarget: 'umd',
     umdNamedDefine: true,

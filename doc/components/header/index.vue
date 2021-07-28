@@ -1,7 +1,10 @@
 <template>
   <div class="doc-header">
     <div class="title">
-      <router-link to="/" class="nav-title">CACTUS-UI</router-link>
+      <router-link
+        to="/"
+        class="nav-title"
+      >Vue-CACTUS-UI</router-link>
     </div>
   </div>
 </template>

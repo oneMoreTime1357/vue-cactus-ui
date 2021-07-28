@@ -14,9 +14,9 @@
 
 原因是项目中有很多vue2的项目，为了达到兼容所以使用了vue2和组合API的形式。
 
-**typescript**
+**Typescript**
 
-使用typescript也是为了避免一些类型错误
+使用Typescript也是为了避免一些类型错误
 
 ## use
 
@@ -46,3 +46,14 @@ yarn run build:doc
 * modal
 * icon
 * empty
+
+## 文档发布
+
+编辑好组件的文档，执行如下命令
+
+```shell
+yarn run deploy:doc
+```
+
+文档静态资源托管到GitHub pages上，可以访问如下地址查看
+[vue-cactus-ui doc](https://onemoretime1357.github.io/vue-cactus-ui/#/)
