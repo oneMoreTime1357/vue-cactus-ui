@@ -1,7 +1,0 @@
-{
-  "button": "packages/button",
-  "input": "packages/input",
-  "modal": "packages/modal",
-  "icon": "packages/icon",
-  "empty": "packages/empty"
-}
