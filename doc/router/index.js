@@ -48,5 +48,6 @@ const routes = [...commonRoutes, ...navRoutes, ...playRoutes]
 
 export default new Router({
   mode: 'history',
+  base: '/vue-cactus-ui',
   routes,
 })
